@@ -12,7 +12,7 @@ try:
     images= requests.get(f"http://{repo_url}/v2/_catalog")
     if images.status_code == 200:
         table = Table(title=f"ALL Images List in Docker Repo at {repo_url} ",title_style="bold turquoise2", header_style="bold deep_sky_blue2 ",style="bold red",min_width=80)
-        table.add_column("Repositories",justify="left",overflow="crop", style="magenta")
+        table.add_column("Images",justify="left",overflow="crop", style="magenta")
         table.add_column("Tags",style="green",overflow="crop")
         images =images.json()
         try:
